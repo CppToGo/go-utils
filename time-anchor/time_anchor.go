@@ -1,9 +1,8 @@
 package time_anchor
 
 import (
+	"log/slog"
 	"time"
-
-	"git.pi-tech.cc/casinous/shared-golib/go-zero/core/logx"
 )
 
 type TimeAnchor struct {
@@ -18,7 +17,7 @@ func NewTimeAnchor(timeAnchorPoint string) *TimeAnchor {
 	}
 	anchorTime, err := time.Parse("2006-01-02 15:04:05 -0700", timeAnchorPoint)
 	if err != nil {
-		logx.Errorf("NewTimeAnchor() error = %v", err)
+		slog.Error("NewTimeAnchor() error", "error", err.Error())
 		return nil
 	}
 	return &TimeAnchor{

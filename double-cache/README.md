@@ -12,7 +12,7 @@
 ## 安装
 
 ```bash
-go get github.com/redis/go-redis/v9
+go get github.com/CppToGo/go-utils/double-cache
 ```
 
 ## 快速开始
