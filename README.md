@@ -8,6 +8,7 @@
 |------|------|:---:|
 | [double-cache](./double-cache) | 泛型双缓存库，基于 two-cache 模式，后台定时刷新，无锁读取 | 1.21 |
 | [time-anchor](./time-anchor) | 基于时间锚点的周期刻度计算工具 | 1.18 |
+| [ticker-mission](./ticker-mission) | 基于 Redis 分布式锁的周期任务调度器，支持幂等启动 | 1.21 |
 
 ## 设计理念
 
@@ -21,7 +22,8 @@
 go-utils/
 ├── go.work              # 工作区文件
 ├── double-cache/        # 泛型双缓存
-├── time-anchor/        # 时间锚点计算
+├── time-anchor/         # 时间锚点计算
+├── ticker-mission/      # 周期任务调度器
 └── README.md
 ```
 
@@ -35,6 +37,9 @@ go get github.com/CppToGo/go-utils/double-cache
 
 # time-anchor
 go get github.com/CppToGo/go-utils/time-anchor
+
+# ticker-mission
+go get github.com/CppToGo/go-utils/ticker-mission
 ```
 
 ## 开发
